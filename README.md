@@ -1,5 +1,9 @@
 # dio_API_python_tarefas
 
+Exercício do curso de 
+[desenvolvimento avancado de rest api com flask](https://web.dio.me/course/desenvolvimento-avancado-de-rest-api-com-flask/learning/0837aa13-7ce2-4ea7-926b-3f2c2c5fbe01), 
+da plataforma Digital Innovation One.
+
 
 ```python
 >>> import requests
