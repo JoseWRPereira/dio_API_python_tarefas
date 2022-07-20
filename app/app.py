@@ -3,6 +3,7 @@ from flask import jsonify,json
 from flask import request
 
 app = Flask(__name__)
+app.config.from_object('config')
 
 lista_tarefas = [
     {   'id':0, 
