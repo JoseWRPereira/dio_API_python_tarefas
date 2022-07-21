@@ -16,7 +16,7 @@ da plataforma Digital Innovation One.
 >>> print( response.json() )
 
 # incluir registro na lista: POST
->>> response = requests.post('http://127.0.0.1:5000/tarefas', json={"responsavel": "Ian","status": "concuido","tarefa": "Construir o DB"} )
+>>> response = requests.post('http://127.0.0.1:5000/tarefas', json={"id":2, "responsavel": "Ian","status": "concuido","tarefa": "Construir o DB"} )
 >>> print( response.json() )
 
 

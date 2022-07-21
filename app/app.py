@@ -33,8 +33,15 @@ def tarefas():
 @app.route('/tarefas/<int:id>', methods=['GET','PUT','DELETE'])
 def tarefa_id(id):
     if request.method == 'GET':
-        task = lista_tarefas[id]
-        return jsonify(task)
+        try:
+            response = lista_tarefas[id]
+        except IndexError:
+            mensagem = "Tarefa com ID {} não existe!".format(id)
+            response = {"status": "erro", "mensagem": mensagem }
+        except Exception:
+            mensagem = "Erro desconhecido. Procure o administrador da API!"
+            response = {"status": "erro", "mensagem": mensagem }
+        return jsonify(response)
     elif request.method == 'PUT':
         dados = json.loads(request.data)
         lista_tarefas[id] = dados
